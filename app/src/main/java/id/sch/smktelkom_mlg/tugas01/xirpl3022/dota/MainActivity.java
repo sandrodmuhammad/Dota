@@ -89,4 +89,32 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    private void doProcess() {
+        if(isValid())
+        {
+            String nama = etNick.getText().toString();
+            tvhasil.setText("Identitas Anda : " + nama);
+        }
+    }
+
+    private boolean isValid() {
+        boolean valid = true;
+        String nama = etNick.getText().toString();
+
+        if(nama.isEmpty())
+        {
+            etNick.setError("Nama Belum diisi");
+            valid = false;
+        }
+        else if(nama.length()<3)
+        {
+            etNick.setError("Nama Minimal 3 Karakter");
+            valid = false;
+        }
+        else
+        {
+            etNick.setError(null);
+        }
+        return valid;
+    }
 }

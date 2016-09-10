@@ -54,4 +54,39 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    private void doClick2() {
+        String hasil4="VALIDASI :\n ";
+        int startln = hasil4.length();
+
+        if(kd.isChecked()) hasil4+=kd.getText()+"(√) ";
+        if(db.isChecked()) hasil4+=db.getText()+"(√) ";
+        if(lt.isChecked()) hasil4+=lt.getText()+"(√)";
+
+
+        if(hasil4.length()==startln) hasil4+="GAGAL  (X)";
+        tvhasil4.setText(hasil4);
+    }
+
+    private void doClick() {
+        String hasil2 = null;
+        if(rbCR.isChecked())
+        {
+            hasil2 = rbCR.getText().toString();
+        }
+        else if(rbSP.isChecked())
+        {
+            hasil2 = rbSP.getText().toString();
+        }
+        if (hasil2 == null)
+        {
+            tvhasil2.setText("Konten Belum Teriidentifikasi");
+        }
+        else {
+            tvhasil2.setText("Playtime Anda : " + hasil2);
+        }
+
+        tvhasil3.setText("Playtime : "+ spplay.getSelectedItem().toString());
+
+
+    }
 }

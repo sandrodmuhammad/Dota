@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             tvhasil2.setText("Konten Belum Teriidentifikasi");
         }
         else {
-            tvhasil2.setText("Playtime Anda : " + hasil2);
+            tvhasil2.setText("PlayStyle Anda : " + hasil2);
         }
 
         tvhasil3.setText("Playtime : "+ spplay.getSelectedItem().toString());
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         if(isValid())
         {
             String nama = etNick.getText().toString();
-            tvhasil.setText("Identitas Anda : " + nama);
+            tvhasil.setText("Nickname Anda : " + nama);
         }
     }
 

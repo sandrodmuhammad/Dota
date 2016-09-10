@@ -4,192 +4,191 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="650dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin"
         tools:context="id.sch.smktelkom_mlg.tugas01.xirpl3022.dota2.MainActivity">
 
         <EditText
-            android:hint="Nickname"
+            android:id="@+id/nick"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/nick"
-            android:layout_marginTop="162dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_marginTop="162dp"
+            android:hint="Nickname" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Play Style"
             android:id="@+id/textView"
-            android:textAlignment="center"
-            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/nick"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:text="Play Style"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Carry"
             android:id="@+id/radioButtonCR"
-            android:checked="false"
-            android:layout_below="@+id/textView"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Support"
-            android:id="@+id/radioButtonSP"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
             android:checked="false"
+            android:text="Carry" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:layout_below="@+id/radioButtonCR"
-            android:layout_alignParentLeft="true" />
+            android:checked="false"
+            android:text="Support" />
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="DOTA 2 Playtime"
-            android:id="@+id/textView2"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:layout_below="@+id/radioButtonSP"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/radioButtonSP"
+            android:text="DOTA 2 Playtime"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
 
         <Spinner
+            android:id="@+id/playtime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/Dota"
-            android:id="@+id/playtime"
-            android:spinnerMode="dialog"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/textView2"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:entries="@array/Dota"
+            android:spinnerMode="dialog" />
 
         <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="OK"
             android:id="@+id/ok"
-            android:layout_gravity="center_horizontal"
-            android:layout_below="@+id/playtime"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="MMR"
-            android:id="@+id/textView3"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:layout_below="@+id/hasil3"
-            android:layout_alignRight="@+id/ok"
-            android:layout_alignEnd="@+id/ok" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="&lt;2000"
-            android:id="@+id/checkBox2000"
-            android:checked="false"
-            android:layout_weight="0.48"
-            android:layout_below="@+id/textView3"
-            android:layout_alignLeft="@+id/textView3"
-            android:layout_alignStart="@+id/textView3" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2000"
-            android:id="@+id/checkBox2000x"
-            android:checked="false"
-            android:layout_weight="0.48"
-            android:layout_alignTop="@+id/checkBox2000"
-            android:layout_centerHorizontal="true" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=">3000"
-            android:id="@+id/checkBox3000"
-            android:checked="false"
-            android:layout_weight="0.48"
-            android:layout_alignTop="@+id/checkBox2000x"
-            android:layout_alignRight="@+id/playtime"
-            android:layout_alignEnd="@+id/playtime" />
-
-        <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="73dp"
-            android:text="Validasi"
-            android:id="@+id/validasi"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/playtime"
             android:layout_gravity="center_horizontal"
+            android:text="OK" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/ok"
+            android:layout_alignRight="@+id/ok"
+            android:layout_below="@+id/hasil3"
+            android:text="MMR"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkBox2000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_alignStart="@+id/textView3"
             android:layout_below="@+id/textView3"
-            android:layout_toRightOf="@+id/textView2"
+            android:layout_weight="0.48"
+            android:checked="false"
+            android:text="&lt;2000" />
+
+        <CheckBox
+            android:id="@+id/checkBox2000x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/checkBox2000"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="0.48"
+            android:checked="false"
+            android:text="2000" />
+
+        <CheckBox
+            android:id="@+id/checkBox3000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/playtime"
+            android:layout_alignRight="@+id/playtime"
+            android:layout_alignTop="@+id/checkBox2000x"
+            android:layout_weight="0.48"
+            android:checked="false"
+            android:text=">3000" />
+
+        <Button
+            android:id="@+id/validasi"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/checkBox2000x"
+            android:layout_gravity="center_horizontal"
             android:layout_toEndOf="@+id/textView2"
-            android:layout_marginTop="65dp" />
+            android:layout_toRightOf="@+id/textView2"
+            android:text="Validasi" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/hasil"
-            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/ok"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/hasil2"
-            android:layout_gravity="center_horizontal"
-            android:layout_below="@+id/hasil"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/hasil3"
-            android:layout_gravity="center_horizontal"
-            android:layout_below="@+id/hasil2"
-            android:layout_centerHorizontal="true" />
+            android:layout_below="@+id/hasil"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
+            android:id="@+id/hasil3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hasil2"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/hasil4"
             android:layout_width="214dp"
             android:layout_height="62dp"
-            android:id="@+id/hasil4"
-            android:layout_gravity="center_horizontal"
             android:layout_below="@+id/validasi"
+            android:layout_gravity="center_horizontal"
             android:layout_toLeftOf="@+id/checkBox3000"
             android:layout_toStartOf="@+id/checkBox3000" />
 
         <TextView
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Form Pendaftaraan Anggota Klub DOTA"
-            android:id="@+id/textView4"
-            android:textSize="18dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:text="Form Pendaftaraan Anggota Klub DOTA"
+            android:textSize="18dp" />
 
         <ImageView
+            android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:id="@+id/imageView"
-            android:src="@drawable/logo"
             android:layout_below="@+id/textView4"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:src="@drawable/logo" />
 
     </RelativeLayout>
 </ScrollView>

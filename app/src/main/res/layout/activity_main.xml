@@ -42,8 +42,7 @@
             android:id="@+id/validasi"
             android:layout_gravity="center_horizontal"
             android:layout_below="@+id/checkBox2000x"
-            android:layout_alignLeft="@+id/checkBox2000x"
-            android:layout_alignStart="@+id/checkBox2000x" />
+            android:layout_centerHorizontal="true" />
 
         <CheckBox
             android:layout_width="wrap_content"
